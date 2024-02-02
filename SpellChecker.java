@@ -79,9 +79,8 @@ public class SpellChecker {
 					}
 				}
 
-					if (numOfChange > threshold){
+					if (numOfChange > threshold)
 						return word;
-					}
 				return minChangeWord;
 			
 				}
