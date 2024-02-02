@@ -73,7 +73,7 @@ public class SpellChecker {
 				for (int i = 1; i < dictionary.length; i++) {
 					int editDistance = levenshtein(word, dictionary[i]);
 
-					if (editDistance <= numOfChange){
+					if (editDistance < numOfChange){
 						numOfChange = editDistance;
 						minChangeWord = dictionary[i];
 					}
