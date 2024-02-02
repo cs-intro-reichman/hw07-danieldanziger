@@ -27,8 +27,8 @@ public class SpellChecker {
 		String lowCaseWord1 = word1.toLowerCase();
 		String lowCaseWord2 = word2.toLowerCase();
 	
-		int length1 = word1.length();
-		int length2 = word2.length();
+		int length1 = lowCaseWord1.length();
+		int length2 = lowCaseWord2.length();
         //if one of the words is an empty string, the numbr of changes between the words will be the number of characters = string lenth of the other
 	if (length1 == 0){
 		return length2;
@@ -38,7 +38,7 @@ public class SpellChecker {
 		return length1;
 	}
 	//if the first char in each word is the same, continue checking the tails
-	if (word1.charAt(0) == word2.charAt(0)){
+	if (lowCaseWord1.charAt(0) == lowCaseWord2.charAt(0)){
 		return levenshtein(tail(lowCaseWord1),tail (lowCaseWord2));
 	}
 	//if the first char is not the same, count this as 1 change and add the minimal number of changes between each comparison:
