@@ -47,7 +47,7 @@ public class SpellChecker {
 	//and then the minimal of the first 2 comparisons and the third comparison=
 	//comparison 3: tail word1 and tail word2 
 	else{
-		return 1 + Math.min(Math.min(levenshtein(tail(word1), word2), levenshtein(word1, tail(word2))), levenshtein(tail(word1), tail(word2)));
+		return 1 + Math.min(Math.min(levenshtein(tail(lowCaseWord1), lowCaseWord2), levenshtein(lowCaseWord1, tail(lowCaseWord2))), levenshtein(tail(lowCaseWord1), tail(lowCaseWord2)));
 
 	}
 	}
@@ -85,3 +85,8 @@ public class SpellChecker {
 			
 				}
 		}
+
+
+
+
+			
